@@ -38,7 +38,7 @@ export default function Education() {
                   border: "1px solid rgba(195,228,29,0.15)",
                 }}
               >
-                <GraduationCap className="w-7 h-7" style={{ color: "#C3E41D" }} />
+                <GraduationCap className="w-7 h-7" style={{ color: "var(--text-dark)" }} />
               </div>
 
               {/* Details */}
@@ -54,7 +54,7 @@ export default function Education() {
                 </h3>
                 <p
                   className="text-sm font-medium mb-1"
-                  style={{ color: "#C3E41D" }}
+                  style={{ color: "var(--text-dark)" }}
                 >
                   Bachelor of Technology — Data Science and Machine Learning
                 </p>
@@ -75,13 +75,13 @@ export default function Education() {
                       border: "1px solid rgba(195,228,29,0.12)",
                     }}
                   >
-                    <Award className="w-5 h-5" style={{ color: "#C3E41D" }} />
+                    <Award className="w-5 h-5" style={{ color: "var(--text-dark)" }} />
                     <div>
                       <p
                         className="text-2xl font-bold"
                         style={{
                           fontFamily: "'Fira Code', monospace",
-                          color: "#C3E41D",
+                          color: "var(--text-dark)",
                         }}
                       >
                         9.21

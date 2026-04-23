@@ -8,6 +8,7 @@ import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { PortfolioGallery } from "@/components/ui/portfolio-gallery";
 
 export default function App() {
   const [isDark, setIsDark] = useState(true);
@@ -35,7 +36,10 @@ export default function App() {
       <div className="divider" />
       <Education />
       <div className="divider" />
+      <div className="divider" />
       <Certifications />
+      <div className="divider" />
+      <PortfolioGallery />
       <div className="divider" />
       <Contact />
       <Footer />

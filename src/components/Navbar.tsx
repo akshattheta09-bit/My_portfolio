@@ -93,20 +93,20 @@ export default function Navbar() {
                   style={{
                     fontFamily: "'Outfit', sans-serif",
                     color: item.highlight
-                      ? "#C3E41D"
+                      ? "var(--text-dark)"
                       : isDark
                       ? "#fff"
                       : "#0a0a0a",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = "#C3E41D";
+                    e.currentTarget.style.color = "var(--text-dark)";
                     e.currentTarget.style.background = isDark
                       ? "rgba(195,228,29,0.06)"
                       : "rgba(195,228,29,0.08)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.color = item.highlight
-                      ? "#C3E41D"
+                      ? "var(--text-dark)"
                       : isDark
                       ? "#fff"
                       : "#0a0a0a";

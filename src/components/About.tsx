@@ -91,7 +91,7 @@ export default function About() {
               className="text-sm font-bold tracking-widest uppercase mb-3"
               style={{
                 fontFamily: "'Fira Code', monospace",
-                color: "#C3E41D",
+                color: "var(--text-dark)",
               }}
             >
               How I Work
@@ -120,7 +120,7 @@ export default function About() {
               className="text-sm font-bold tracking-widest uppercase mb-3"
               style={{
                 fontFamily: "'Fira Code', monospace",
-                color: "#C3E41D",
+                color: "var(--text-dark)",
               }}
             >
               Current Direction
@@ -136,7 +136,7 @@ export default function About() {
             <a
               href="#contact"
               className="inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors"
-              style={{ color: "#C3E41D" }}
+              style={{ color: "var(--text-dark)" }}
             >
               Let's connect <ArrowRight className="w-4 h-4" />
             </a>
@@ -152,7 +152,7 @@ export default function About() {
             <div key={item.title} className="card group">
               <item.icon
                 className="w-6 h-6 mb-4 transition-colors duration-300"
-                style={{ color: "#C3E41D" }}
+                style={{ color: "var(--text-dark)" }}
               />
               <h4
                 className="text-base font-semibold mb-2"

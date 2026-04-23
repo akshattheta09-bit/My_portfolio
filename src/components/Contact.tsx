@@ -46,13 +46,13 @@ const socials = [
     icon: GithubIcon,
     label: "GitHub",
     href: "https://github.com/",
-    color: "#C3E41D",
+    color: "var(--text-dark)",
   },
   {
     icon: Mail,
     label: "Email",
     href: "mailto:hello@akshatyadav.com",
-    color: "#C3E41D",
+    color: "var(--text-dark)",
   },
 ];
 

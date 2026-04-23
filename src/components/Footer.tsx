@@ -19,7 +19,7 @@ export default function Footer() {
         }}
       >
         © {new Date().getFullYear()} Akshat Yadav. Built with{" "}
-        <Heart className="w-3 h-3 inline" style={{ color: "#C3E41D" }} />{" "}
+        <Heart className="w-3 h-3 inline" style={{ color: "var(--text-dark)" }} />{" "}
         and curiosity.
       </p>
     </footer>

@@ -76,7 +76,7 @@ export default function Certifications() {
                 className="absolute top-0 left-0 w-full h-[2px]"
                 style={{
                   background: `linear-gradient(to right, ${
-                    issuerColors[cert.issuer] || "#C3E41D"
+                    issuerColors[cert.issuer] || "var(--text-dark)"
                   }, transparent)`,
                   opacity: 0.5,
                 }}
@@ -95,7 +95,7 @@ export default function Certifications() {
                   <ShieldCheck
                     className="w-5 h-5"
                     style={{
-                      color: issuerColors[cert.issuer] || "#C3E41D",
+                      color: issuerColors[cert.issuer] || "var(--text-dark)",
                     }}
                   />
                 </div>
@@ -114,7 +114,7 @@ export default function Certifications() {
                   <p
                     className="text-xs font-medium"
                     style={{
-                      color: issuerColors[cert.issuer] || "#C3E41D",
+                      color: issuerColors[cert.issuer] || "var(--text-dark)",
                     }}
                   >
                     {cert.issuer}

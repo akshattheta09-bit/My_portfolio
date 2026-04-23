@@ -35,7 +35,7 @@ export default function Hero() {
               direction="top"
               className="font-bold text-[100px] sm:text-[140px] md:text-[180px] lg:text-[210px] leading-[0.75] tracking-tighter uppercase justify-center whitespace-nowrap"
               style={{
-                color: "#C3E41D",
+                color: "var(--text-dark)",
                 fontFamily: "'Fira Code', monospace",
               }}
             />
@@ -48,7 +48,7 @@ export default function Hero() {
               direction="top"
               className="font-bold text-[100px] sm:text-[140px] md:text-[180px] lg:text-[210px] leading-[0.75] tracking-tighter uppercase justify-center whitespace-nowrap"
               style={{
-                color: "#C3E41D",
+                color: "var(--text-dark)",
                 fontFamily: "'Fira Code', monospace",
               }}
             />

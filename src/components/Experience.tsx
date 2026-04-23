@@ -69,7 +69,7 @@ export default function Experience() {
                     </h3>
                     <p
                       className="text-sm font-medium mt-1 flex items-center gap-2"
-                      style={{ color: "#C3E41D" }}
+                      style={{ color: "var(--text-dark)" }}
                     >
                       {exp.org}
                       <ExternalLink className="w-3 h-3 opacity-50" />
