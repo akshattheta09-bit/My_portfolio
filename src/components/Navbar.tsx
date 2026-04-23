@@ -137,17 +137,15 @@ export default function Navbar() {
         <button
           type="button"
           onClick={toggle}
-          className="relative w-14 h-7 rounded-full hover:opacity-80 transition-opacity"
-          style={{
-            backgroundColor: isDark ? "#1a1a1a" : "#e5e5e5",
-          }}
+          className="relative w-16 h-8 rounded-full hover:opacity-80 transition-opacity"
+          style={{ backgroundColor: isDark ? "hsl(0 0% 15%)" : "hsl(0 0% 90%)" }}
           aria-label="Toggle theme"
         >
           <div
-            className="absolute top-0.5 left-0.5 w-6 h-6 rounded-full transition-transform duration-300"
+            className="absolute top-1 left-1 w-6 h-6 rounded-full transition-transform duration-300"
             style={{
-              backgroundColor: isDark ? "#fff" : "#0a0a0a",
-              transform: isDark ? "translateX(1.75rem)" : "translateX(0)",
+              backgroundColor: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)",
+              transform: isDark ? "translateX(2rem)" : "translateX(0)",
             }}
           />
         </button>

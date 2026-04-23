@@ -57,18 +57,22 @@ export default function About() {
         {/* Text Column */}
         <div className="lg:col-span-3 space-y-6">
           <p className="section-text">
-            I am a B.Tech student in Data Science and Machine Learning at Lovely Professional University
-            (with upGrad collaboration), with a growing interest in building practical and scalable digital systems.
+            I am a B.Tech student in Data Science and Machine Learning at Lovely Professional University, with a growing interest in building practical and scalable digital systems.
           </p>
           <p className="section-text">
-            My work so far has been centered around exploring how software and automation can solve real-world problems
-            in simple and efficient ways. I have built several small to mid-scale projects, including tools for task management,
-            data extraction, and basic application systems.
+            My work so far has been centered around exploring how software and automation can solve real-world problems in simple and efficient ways. I have built several small to mid-scale projects, including tools for task management, data extraction, and basic application systems. These projects reflect my focus on learning by doing rather than purely theoretical study.
           </p>
           <p className="section-text">
-            I am an aspiring entrepreneur and technology enthusiast with a strong interest in artificial intelligence,
-            automation, and scalable digital systems. My focus is on building practical solutions that leverage AI
-            to improve efficiency, decision-making, and business growth.
+            Beyond individual projects, I am actively involved in collaborative technical communities where I contribute to group-based initiatives related to artificial intelligence and system development. This has helped me understand how to work in teams, think about implementation challenges, and approach problem-solving from a practical perspective.
+          </p>
+          <p className="section-text">
+            I have also completed foundational certifications in backend development, databases, version control, and development tools, which support my ability to build and manage structured applications. Additionally, I achieved a Bronze Level in the WorldQuant Challenge, reflecting my early exposure to data-driven and quantitative thinking.
+          </p>
+          <p className="section-text">
+            At this stage, my primary focus is on growth — improving how I think, build, and approach problems. I am particularly interested in understanding how intelligent systems and automation can be applied to create scalable solutions over time.
+          </p>
+          <p className="section-text">
+            Overall, I aim to gradually evolve from building small functional projects to developing more impactful systems that combine simplicity, usability, and long-term value.
           </p>
 
           {/* How I Work */}
@@ -96,11 +100,9 @@ export default function About() {
               className="text-sm leading-relaxed"
               style={{ color: isDark ? "#a3a3a3" : "#6b7280" }}
             >
-              I prefer a hands-on and iterative approach to learning. I start with small ideas,
-              build simple versions, and improve them over time. I focus on clarity, functionality,
-              and understanding the core problem before adding complexity. I value consistency
-              over intensity and aim to build a strong foundation by continuously experimenting,
-              learning, and refining my work.
+              I prefer a hands-on and iterative approach to learning. I start with small ideas, build simple versions, and improve them over time. I focus on clarity, functionality, and understanding the core problem before adding complexity.
+              <br /><br />
+              I value consistency over intensity and aim to build a strong foundation by continuously experimenting, learning, and refining my work.
             </p>
           </div>
 
@@ -127,11 +129,9 @@ export default function About() {
               className="text-sm leading-relaxed"
               style={{ color: isDark ? "#a3a3a3" : "#6b7280" }}
             >
-              Currently exploring the intersection of automation, intelligent systems, and
-              scalable digital tools. I am interested in how small systems can be expanded
-              into larger, more useful solutions over time. I am also gradually exploring
-              areas like data-driven decision making and quantitative approaches, with the
-              goal of applying them in practical scenarios.
+              Currently, I am exploring the intersection of automation, intelligent systems, and scalable digital tools. I am interested in how small systems can be expanded into larger, more useful solutions over time.
+              <br /><br />
+              I am also gradually exploring areas like data-driven decision making and quantitative approaches, with the goal of applying them in practical scenarios.
             </p>
             <a
               href="#contact"

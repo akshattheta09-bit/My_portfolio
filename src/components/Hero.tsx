@@ -33,7 +33,7 @@ export default function Hero() {
               delay={100}
               animateBy="letters"
               direction="top"
-              className="font-bold text-[72px] sm:text-[110px] md:text-[150px] lg:text-[190px] leading-[0.8] tracking-tighter uppercase justify-center whitespace-nowrap"
+              className="font-bold text-[100px] sm:text-[140px] md:text-[180px] lg:text-[210px] leading-[0.75] tracking-tighter uppercase justify-center whitespace-nowrap"
               style={{
                 color: "#C3E41D",
                 fontFamily: "'Fira Code', monospace",
@@ -46,7 +46,7 @@ export default function Hero() {
               delay={100}
               animateBy="letters"
               direction="top"
-              className="font-bold text-[72px] sm:text-[110px] md:text-[150px] lg:text-[190px] leading-[0.8] tracking-tighter uppercase justify-center whitespace-nowrap"
+              className="font-bold text-[100px] sm:text-[140px] md:text-[180px] lg:text-[210px] leading-[0.75] tracking-tighter uppercase justify-center whitespace-nowrap"
               style={{
                 color: "#C3E41D",
                 fontFamily: "'Fira Code', monospace",
@@ -57,9 +57,9 @@ export default function Hero() {
           {/* Profile Picture Overlay */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <div
-              className="w-[60px] h-[100px] sm:w-[85px] sm:h-[144px] md:w-[105px] md:h-[178px] lg:w-[120px] lg:h-[200px] rounded-full overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-110 cursor-pointer"
+              className="w-[65px] h-[110px] sm:w-[90px] sm:h-[152px] md:w-[110px] md:h-[185px] lg:w-[129px] lg:h-[218px] rounded-full overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-110 cursor-pointer"
               style={{
-                border: `2px solid ${isDark ? "rgba(195,228,29,0.3)" : "rgba(195,228,29,0.5)"}`,
+                // No border to match requested design
               }}
             >
               <img
@@ -73,14 +73,14 @@ export default function Hero() {
       </div>
 
       {/* Tagline */}
-      <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-32 left-1/2 -translate-x-1/2 w-full px-6">
+      <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-32 xl:bottom-36 left-1/2 -translate-x-1/2 w-full px-6">
         <div className="flex justify-center">
           <BlurText
-            text="Building practical solutions with AI, automation & scalable systems."
-            delay={120}
+            text="Building practical AI solutions & scalable systems."
+            delay={150}
             animateBy="words"
             direction="top"
-            className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-center transition-colors duration-300"
+            className="text-[15px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-center transition-colors duration-300"
             style={{
               fontFamily: "'Antic', sans-serif",
               color: isDark ? "#737373" : "#6b7280",
@@ -101,7 +101,7 @@ export default function Hero() {
         }
       >
         <ChevronDown
-          className="w-5 h-5 md:w-7 md:h-7 transition-colors duration-300"
+          className="w-5 h-5 md:w-8 md:h-8 transition-colors duration-300 text-neutral-500 hover:text-black dark:hover:text-white"
           style={{
             color: isDark ? "#737373" : "#9ca3af",
             animation: "chevron-bounce 2s ease-in-out infinite",
