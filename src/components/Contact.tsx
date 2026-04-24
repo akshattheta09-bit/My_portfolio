@@ -41,18 +41,19 @@ const socials = [
     label: "LinkedIn",
     href: "https://linkedin.com/in/akshat-yadav-614a56379",
     color: "#0A66C2",
+    dynamicColor: false,
   },
   {
     icon: GithubIcon,
     label: "GitHub",
     href: "https://github.com/",
-    color: "var(--text-dark)",
+    dynamicColor: true,
   },
   {
     icon: Mail,
     label: "Email",
     href: "mailto:hello@akshatyadav.com",
-    color: "var(--text-dark)",
+    dynamicColor: true,
   },
 ];
 
@@ -90,8 +91,9 @@ export default function Contact() {
                 borderColor: isDark ? "#1a1a1a" : "#e5e5e5",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = s.color;
-                (e.currentTarget as HTMLElement).style.boxShadow = `0 8px 30px ${s.color}15`;
+                const hoverColor = s.dynamicColor ? (isDark ? "#ffffff" : "#000000") : s.color;
+                (e.currentTarget as HTMLElement).style.borderColor = hoverColor!;
+                (e.currentTarget as HTMLElement).style.boxShadow = `0 8px 30px ${hoverColor}15`;
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.borderColor = isDark
@@ -102,7 +104,7 @@ export default function Contact() {
             >
               <s.icon
                 className="w-5 h-5 transition-colors"
-                style={{ color: s.color }}
+                style={{ color: s.dynamicColor ? (isDark ? "var(--text-dark)" : "var(--text-light)") : s.color }}
               />
               <span
                 className="font-medium text-sm"
@@ -115,7 +117,7 @@ export default function Contact() {
               </span>
               <ArrowUpRight
                 className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                style={{ color: s.color }}
+                style={{ color: s.dynamicColor ? (isDark ? "var(--text-dark)" : "var(--text-light)") : s.color }}
               />
             </a>
           ))}

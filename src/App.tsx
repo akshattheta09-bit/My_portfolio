@@ -5,7 +5,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
-import Certifications from "@/components/Certifications";
+import Skills from "@/components/Skills";
+import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { PortfolioGallery } from "@/components/ui/portfolio-gallery";
@@ -36,8 +37,9 @@ export default function App() {
       <div className="divider" />
       <Education />
       <div className="divider" />
+      <Skills />
       <div className="divider" />
-      <Certifications />
+      <Services />
       <div className="divider" />
       <PortfolioGallery />
       <div className="divider" />

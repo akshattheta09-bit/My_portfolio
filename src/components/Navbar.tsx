@@ -7,7 +7,8 @@ const navItems = [
   { label: "ABOUT", href: "#about" },
   { label: "EXPERIENCE", href: "#experience" },
   { label: "EDUCATION", href: "#education" },
-  { label: "CERTIFICATIONS", href: "#certifications" },
+  { label: "SKILLS", href: "#skills" },
+  { label: "EXPERTISE", href: "#services" },
   { label: "CONTACT", href: "#contact" },
 ];
 
@@ -56,7 +57,7 @@ export default function Navbar() {
     >
       <nav className="flex items-center justify-between max-w-screen-2xl mx-auto">
         {/* Menu Button */}
-        <div className="relative">
+        <div>
           <button
             ref={buttonRef}
             type="button"
@@ -76,41 +77,62 @@ export default function Navbar() {
             )}
           </button>
 
-          {isMenuOpen && (
-            <div
-              ref={menuRef}
-              className="absolute top-full left-0 w-[220px] shadow-2xl mt-2 ml-2 p-4 rounded-xl z-[100] border"
-              style={{
-                backgroundColor: isDark ? "#0a0a0a" : "#fff",
-                borderColor: isDark ? "#1a1a1a" : "#e5e5e5",
-              }}
-            >
-              {navItems.map((item) => (
+        </div>
+
+        {/* Sliding Sidebar Menu */}
+        <>
+          {/* Backdrop */}
+          <div
+            className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] transition-opacity duration-300 ${
+              isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
+            onClick={() => setIsMenuOpen(false)}
+          />
+
+          {/* Sidebar */}
+          <div
+            ref={menuRef}
+            className={`fixed top-0 left-0 bottom-0 w-[300px] max-w-[80vw] z-[100] shadow-2xl transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) border-r flex flex-col`}
+            style={{
+              backgroundColor: isDark ? "#050505" : "#fafafa",
+              borderColor: isDark ? "#1f1f1f" : "#eaeaea",
+              transform: isMenuOpen ? "translateX(0)" : "translateX(-100%)",
+            }}
+          >
+            <div className="flex items-center justify-between p-6 border-b" style={{ borderColor: isDark ? "#1f1f1f" : "#eaeaea" }}>
+              <span className="font-bold text-lg tracking-widest" style={{ fontFamily: 'var(--font-heading)', color: textCol }}>NAVIGATION</span>
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 rounded-full transition-colors hover:bg-black/5 dark:hover:bg-white/5"
+              >
+                <X className="w-6 h-6" style={{ color: textCol }} />
+              </button>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-2">
+              {navItems.map((item, i) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block text-base font-bold tracking-tight py-2 px-3 rounded-lg cursor-pointer transition-colors duration-300"
+                  className="group flex items-center justify-between text-lg font-medium tracking-wide py-4 px-4 rounded-xl cursor-pointer transition-all duration-300"
                   style={{
                     fontFamily: "'Outfit', sans-serif",
-                    color: item.highlight
-                      ? "var(--text-dark)"
-                      : isDark
-                      ? "#fff"
-                      : "#0a0a0a",
+                    color: item.highlight ? "var(--text-dark)" : (isDark ? "#a3a3a3" : "#555555"),
+                    transform: isMenuOpen ? "translateX(0)" : "translateX(-20px)",
+                    opacity: isMenuOpen ? 1 : 0,
+                    transitionDelay: `${i * 50}ms`,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = "var(--text-dark)";
+                    e.currentTarget.style.color = isDark ? "#ffffff" : "#000000";
                     e.currentTarget.style.background = isDark
-                      ? "rgba(195,228,29,0.06)"
-                      : "rgba(195,228,29,0.08)";
+                      ? "rgba(255,255,255,0.05)"
+                      : "rgba(0,0,0,0.05)";
+                    e.currentTarget.style.paddingLeft = "1.5rem";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = item.highlight
-                      ? "var(--text-dark)"
-                      : isDark
-                      ? "#fff"
-                      : "#0a0a0a";
+                    e.currentTarget.style.color = item.highlight ? "var(--text-dark)" : (isDark ? "#a3a3a3" : "#555555");
                     e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.paddingLeft = "1rem";
                   }}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -118,8 +140,8 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-          )}
-        </div>
+          </div>
+        </>
 
         {/* Signature */}
         <a

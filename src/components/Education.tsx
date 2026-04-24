@@ -21,8 +21,7 @@ export default function Education() {
             <div
               className="absolute top-0 right-0 w-48 h-48 rounded-full opacity-5 pointer-events-none"
               style={{
-                background:
-                  "radial-gradient(circle, #C3E41D 0%, transparent 70%)",
+                background: "radial-gradient(circle, var(--text-dark) 0%, transparent 70%)",
                 transform: "translate(30%, -30%)",
               }}
             />
@@ -33,12 +32,12 @@ export default function Education() {
                 className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center"
                 style={{
                   background: isDark
-                    ? "rgba(195,228,29,0.08)"
-                    : "rgba(195,228,29,0.1)",
-                  border: "1px solid rgba(195,228,29,0.15)",
+                    ? "rgba(255,255,255,0.05)"
+                    : "rgba(0,0,0,0.05)",
+                  border: isDark ? "1px solid rgba(255,255,255,0.1)" : "1px solid rgba(0,0,0,0.1)",
                 }}
               >
-                <GraduationCap className="w-7 h-7" style={{ color: "var(--text-dark)" }} />
+                <GraduationCap className="w-7 h-7" style={{ color: isDark ? "var(--text-dark)" : "var(--text-light)" }} />
               </div>
 
               {/* Details */}
@@ -54,7 +53,7 @@ export default function Education() {
                 </h3>
                 <p
                   className="text-sm font-medium mb-1"
-                  style={{ color: "var(--text-dark)" }}
+                  style={{ color: isDark ? "var(--text-dark)" : "var(--text-light)" }}
                 >
                   Bachelor of Technology — Data Science and Machine Learning
                 </p>
@@ -70,18 +69,18 @@ export default function Education() {
                     className="flex items-center gap-3 px-5 py-3 rounded-xl"
                     style={{
                       background: isDark
-                        ? "rgba(195,228,29,0.06)"
-                        : "rgba(195,228,29,0.08)",
-                      border: "1px solid rgba(195,228,29,0.12)",
+                        ? "rgba(255,255,255,0.03)"
+                        : "rgba(0,0,0,0.03)",
+                      border: isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.08)",
                     }}
                   >
-                    <Award className="w-5 h-5" style={{ color: "var(--text-dark)" }} />
+                    <Award className="w-5 h-5" style={{ color: isDark ? "var(--text-dark)" : "var(--text-light)" }} />
                     <div>
                       <p
                         className="text-2xl font-bold"
                         style={{
                           fontFamily: "'Fira Code', monospace",
-                          color: "var(--text-dark)",
+                          color: isDark ? "var(--text-dark)" : "var(--text-light)",
                         }}
                       >
                         9.21

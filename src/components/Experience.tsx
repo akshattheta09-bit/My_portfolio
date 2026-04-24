@@ -23,6 +23,16 @@ const experiences = [
       "Collaborated with a team of developers to design, program, and implement various AI-driven projects and hardware integrations. Contributing to group-based initiatives related to artificial intelligence and system development.",
     tags: ["AI", "Robotics", "Team Collaboration", "Hardware"],
   },
+  {
+    role: "Freelance Video Editor & Manager",
+    org: "Independent",
+    type: "Freelance",
+    period: "Ongoing",
+    location: "Remote",
+    description:
+      "Handled video editing and managerial tasks for various clients, delivering high-quality content and ensuring smooth project execution. Managed timelines, creative direction, and client communication.",
+    tags: ["Video Editing", "Project Management", "Freelance", "Communication"],
+  },
 ];
 
 export default function Experience() {
@@ -50,7 +60,7 @@ export default function Experience() {
               <div
                 className="absolute top-0 left-0 w-1 h-full rounded-l-2xl transition-all duration-300"
                 style={{
-                  background: "linear-gradient(to bottom, #C3E41D, transparent)",
+                  background: "linear-gradient(to bottom, var(--text-dark), transparent)",
                   opacity: 0.5,
                 }}
               />
@@ -69,7 +79,7 @@ export default function Experience() {
                     </h3>
                     <p
                       className="text-sm font-medium mt-1 flex items-center gap-2"
-                      style={{ color: "var(--text-dark)" }}
+                      style={{ color: isDark ? "var(--text-dark)" : "var(--text-light)" }}
                     >
                       {exp.org}
                       <ExternalLink className="w-3 h-3 opacity-50" />

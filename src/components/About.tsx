@@ -80,18 +80,18 @@ export default function About() {
             className="mt-10 p-6 rounded-2xl border"
             style={{
               background: isDark
-                ? "rgba(195,228,29,0.03)"
-                : "rgba(195,228,29,0.05)",
+                ? "rgba(255,255,255,0.02)"
+                : "rgba(0,0,0,0.02)",
               borderColor: isDark
-                ? "rgba(195,228,29,0.1)"
-                : "rgba(195,228,29,0.15)",
+                ? "rgba(255,255,255,0.1)"
+                : "rgba(0,0,0,0.1)",
             }}
           >
             <h3
               className="text-sm font-bold tracking-widest uppercase mb-3"
               style={{
                 fontFamily: "'Fira Code', monospace",
-                color: "var(--text-dark)",
+                color: isDark ? "var(--text-dark)" : "var(--text-light)",
               }}
             >
               How I Work
@@ -120,7 +120,7 @@ export default function About() {
               className="text-sm font-bold tracking-widest uppercase mb-3"
               style={{
                 fontFamily: "'Fira Code', monospace",
-                color: "var(--text-dark)",
+                color: isDark ? "var(--text-dark)" : "var(--text-light)",
               }}
             >
               Current Direction
@@ -136,7 +136,7 @@ export default function About() {
             <a
               href="#contact"
               className="inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors"
-              style={{ color: "var(--text-dark)" }}
+              style={{ color: isDark ? "var(--text-dark)" : "var(--text-light)" }}
             >
               Let's connect <ArrowRight className="w-4 h-4" />
             </a>
@@ -152,7 +152,7 @@ export default function About() {
             <div key={item.title} className="card group">
               <item.icon
                 className="w-6 h-6 mb-4 transition-colors duration-300"
-                style={{ color: "var(--text-dark)" }}
+                style={{ color: isDark ? "var(--text-dark)" : "var(--text-light)" }}
               />
               <h4
                 className="text-base font-semibold mb-2"

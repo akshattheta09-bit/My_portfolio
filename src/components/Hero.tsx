@@ -35,7 +35,7 @@ export default function Hero() {
               direction="top"
               className="font-bold text-[100px] sm:text-[140px] md:text-[180px] lg:text-[210px] leading-[0.75] tracking-tighter uppercase justify-center whitespace-nowrap"
               style={{
-                color: "var(--text-dark)",
+                color: isDark ? "var(--text-dark)" : "var(--text-light)",
                 fontFamily: "'Fira Code', monospace",
               }}
             />
@@ -48,26 +48,10 @@ export default function Hero() {
               direction="top"
               className="font-bold text-[100px] sm:text-[140px] md:text-[180px] lg:text-[210px] leading-[0.75] tracking-tighter uppercase justify-center whitespace-nowrap"
               style={{
-                color: "var(--text-dark)",
+                color: isDark ? "var(--text-dark)" : "var(--text-light)",
                 fontFamily: "'Fira Code', monospace",
               }}
             />
-          </div>
-
-          {/* Profile Picture Overlay */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <div
-              className="w-[65px] h-[110px] sm:w-[90px] sm:h-[152px] md:w-[110px] md:h-[185px] lg:w-[129px] lg:h-[218px] rounded-full overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-110 cursor-pointer"
-              style={{
-                // No border to match requested design
-              }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=500&fit=crop&crop=face"
-                alt="Akshat Yadav"
-                className="w-full h-full object-cover"
-              />
-            </div>
           </div>
         </div>
       </div>
